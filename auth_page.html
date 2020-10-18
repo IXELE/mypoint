@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>My Point</title>
+	<link rel="shortcut icon" type="image/png" href="img/favicon-main.png">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="https://api-maps.yandex.ru/2.1/?apikey=b45e8fdc-19c2-4b11-a8e8-a32cea25cb98&lang=ru_RU" type="text/javascript"></script>
+</head>
+<body>
+	<header>
+		<object class="logo" 
+			type="image/svg+xml"
+			data="img/Logo.svg">
+
+			<img
+			src="img/Logo.svg">
+
+		</object>
+	</header>
+
+<div id = "login_page_wrap"> 
+	<h1>Добро пожаловать</h1>
+
+		<h3 id = "reg_alert"></h3>
+
+		<div id = "in_form_wrap" class = "flex__around"> 
+			<div class = "form_wrap"> 
+				<h3>Зарегистрируйтесь</h3>
+				<form action = "login_check.php" method = "POST" id = "login_form"> 
+					<h5>Ваше имя</h5>
+					<input type = "text" required name = "name" id = "reg_name">
+					<h5>Ваш E-mail</h5>
+					<input type = "email" required name = "email" id = "reg_email">
+					<h5>Ваш пароль</h5>
+					<input type = "password" required name = "pass" id = "reg_pass">
+
+					<div class = "btn reg_btns"> 
+						<button class = "flex__column"><p>Зарегистрируйтесь</p></button>
+					</div>
+				</form>
+			</div>
+			<div class = "form_wrap"> 
+				<h3>Авторизуйтесь</h3>
+				<form action = "auth_check.php" method = "POST" id = "auth_form"> 
+					<h5>Ваш логин</h5>
+					<input type = "text" required name = "name" id = "auth_name">
+					<h5>Ваш пароль</h5>
+					<input type = "password" required name = "pass" id = "auth_pass">
+
+					<div class = "btn reg_btns"> 
+						<button class = "flex__column"><p>Авторизуйтесь</p></button><br>
+						<a href="../courier_pp.php?id=1">Войти под курьером1</a><br><br>
+						<a href="../courier_pp.php?id=2">Войти под курьером2</a>
+					</div>
+				</form>
+			</div>
+		</div>
+</div>
+ 
+	
+<script src="js/jquery-3.5.1.js"></script>
+<script src="js/script_lk.js"></script>
+	
+	
+</body>
+</html>
